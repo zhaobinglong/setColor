@@ -125,8 +125,4 @@
 
 	}
 
-      //初始化Slider 实例
-		new Slider({
-			dom : document.getElementById('slider'),
-			obj : document.getElementById('color'),
-		});
+   

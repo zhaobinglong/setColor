@@ -1,0 +1,30 @@
+{
+  "name": "setColor",
+  "version": "1.0.0",
+  "description": "one javascript color choice  plugin be used in modile ",
+  "main": "setColor.js",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhaobinglong/setColor.git"
+  },
+  "keywords": [
+    "javascript",
+    "color",
+    "plugin"
+  ],
+  "author": "zbl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhaobinglong/setColor/issues"
+  },
+  "homepage": "https://github.com/zhaobinglong/setColor"
+}

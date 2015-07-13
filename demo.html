@@ -20,10 +20,19 @@
 	</style>
 </head>
 <body>
+<!-- 这个是容器 -->
 <ul  class='wrap' id='slider'>
-
 </ul>	
+<!-- 这是目标节点 -->
 <div id='color'></div>
 </body>
+
 <script type="text/javascript" src='./build/setColor.min.js'></script>
+<script type="text/javascript">
+//初始化Slider 
+new Slider({
+     dom : document.getElementById('slider'),
+     obj : document.getElementById('color'),
+});
+</script>
 </html>
