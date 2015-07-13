@@ -22,7 +22,8 @@
 
 #Creators
 ###zbl
-<http://weibo.com/zhaobinglong>
+* <http://weibo.com/zhaobinglong>
+* http://segmentfault.com/u/binglong
 
 #Copyright and license
  MIT
