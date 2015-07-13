@@ -12,7 +12,7 @@
 
 #demo
  扫描二维码，在手机端使用
- ![image](https://github.com/zhaobinglong/setColor/raw/gh-pages/img/v1.png)
+ ![image](https://github.com/zhaobinglong/setColor/raw/gh-pages/img/1.png)
 
 #Copyright and license
  MIT
