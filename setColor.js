@@ -42,6 +42,7 @@
 			
 			li.appendChild(span);
 		    this.outer.appendChild(li);
+		    
 		};
 		
 	}

@@ -12,3 +12,6 @@
 
 #demo
  扫描二维码，在手机端使用
+
+#Copyright and license
+ MIT
