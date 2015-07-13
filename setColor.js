@@ -2,10 +2,16 @@
 	function Slider(opts){
 		//构造函数需要的参数
 		this.outer = opts.dom;
+		this.obj=opts.obj;
 		//构造三步奏
 		this.init();
 		this.renderDOM();
 		this.bindDOM();
+
+		// 初始化目标元素色彩
+		this.red=255;
+		this.green=255;
+		this.blue=255
 	}
 
 	// //第一步 -- 初始化
@@ -53,30 +59,51 @@
 				target = target.parentNode;
 			}
 			self.target = target;
-			console.log(self.target);
+
 		}
         
         //移动
 		var movehalder=function(evt){
 			evt.preventDefault();
-			console.log(evt);
+
+			// 获取目标索引
+			self.index=Array.prototype.slice.call(self.outer.childNodes).indexOf(evt.target.parentNode);
             
             // 滑块偏移距离
 			self.offset=evt.targetTouches[0].pageX-self.left;
 
-            console.log(evt.targetTouches[0].pageX-self.left);
+            console.log(self.index);
+			
+
 			if(self.offset<=0){
 				self.style.webkitTransform = 'translate3d(0, 0, 0)';
-				// self.green=0;
+
 			}else if(self.offset>=self.width){
 				self.style.webkitTransform = 'translate3d('+ self.width +'px, 0, 0)';
-				self.green=255;
+
 			}else{
 			 	evt.target.style.webkitTransform = 'translate3d('+ self.offset +'px, 0, 0)';
 				// self.green=parseInt((self.offset/self.width)*255);
 			}
+
+            
+            switch(self.index){
+				case 1:
+				   self.red=parseInt((self.offset/self.width)*255);
+				   break;
+				case 2:
+                   self.green=parseInt((self.offset/self.width)*255);
+                   break;
+                case 3:
+                   self.blue=parseInt((self.offset/self.width)*255);
+                   break;                   
+				  
+			}
 			
 
+			// 给目标上色
+			self.obj.style.backgroundColor='rgb('+self.red+','+self.green+','+self.blue+')';
+             
             
 
 		}
@@ -101,4 +128,5 @@
       //初始化Slider 实例
 		new Slider({
 			dom : document.getElementById('slider'),
+			obj : document.getElementById('color'),
 		});
